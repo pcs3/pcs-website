@@ -1,0 +1,265 @@
+p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.video-time{
+  background-color: black;
+  color:white;
+  position: absolute;
+  bottom:8px;
+  right: 5px;
+  font-family: roboto,arial;
+  font-size: 12px;
+  font-weight: 500px;
+  padding:4px 4px 4px 4px;
+  border-radius: 4px;
+}
+.search-bar {
+  display: block;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  overflow: hidden;
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+@media (max-width: 750px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width:1000px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px){}
+.header{
+  height:55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(212, 212, 213); 
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+  z-index: 100;
+}
+.sidebar{
+  background-color: white;
+  width: 72px;
+  position: fixed; 
+  top: 55px;
+  bottom: 0px;
+  left: 0px;
+  z-index:200;
+  padding-top: 5px;
+
+}
+.sidebar-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 74px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 4px;
+}
+.sidebar-link div{
+  font-family: roboto,arial;
+  font-size:10px;
+
+}
+.sidebar-link:hover{
+  background-color: rgb(235,235,235);
+}
+.left-section{
+  display:flex;
+  align-items: center;
+}
+.hamburger-menu{
+  width: 25px;
+  margin-right: 20px;
+  margin-left: 24px;
+}
+.youtube-logo{
+  width:100px;
+}
+.right-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  flex-shrink: 0;
+}
+.upload{
+  width: 20px;
+}
+.youtube-apps{
+  width: 20px;
+}
+.notification{
+  width:20px;
+}
+.ja{
+  width: 20px;
+  border-radius: 50px;
+}
+.middle-section{
+  display: flex;
+  flex:1;
+  margin-left: 70px;
+  margin-right:35px;
+  align-items: center;
+  max-width: 500px;
+}
+.search{
+  height: 20px;
+  max-width: 500px;
+}
+.voice-search-icon{
+  height: 20px;
+}
+.search-button{
+  padding: 10.5px 15px;
+  margin-right: 10px;
+  background-color: rgb(231, 229, 229);
+  border-style: solid;
+  border-width: 1px;
+  border-color:rgb(183, 183, 183);
+  border-radius: 2px;
+  width: 66px;
+  margin-left: -2px;
+
+  
+}
+.search-button,
+.voice-search-button,
+.upload-container,
+.youtube-apps-container,
+.notification-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-button .tooltip,
+.voice-search-button .tooltip,
+ .upload-container .tooltip,
+ .youtube-apps-container .tooltip,
+ .notification-div .tooltip{
+  font-family: roboto,arial;
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  cursor: pointer;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-container:hover .tooltip,
+.youtube-apps-container:hover .tooltip,
+.notification-div:hover .tooltip{
+  opacity: 1;
+}
+
+.voice-search-button{
+  border-radius: 360px;
+  border:none;
+  padding:5px 10px 6px 10px;
+  background-color: rgb(231,229,229);
+
+
+}
+.search-bar::placeholder{
+  font-family:roboto,arial;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.search-bar{
+  flex: 1;
+  height: 33px;
+  font-size: 13px;
+  border-style: solid;
+  border-color: rgb(183, 183, 183);
+  border-width: 0.5px;
+  border-radius: 2px;
+  width:0;
+  box-shadow: inset 1px 2px 2px rgba(0,0,0,0.05);
+}
+.notification-div{
+  position:relative;
+}
+.n-notification{
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  background-color: red;
+  color: white;
+  font-family: Roboto,arial;
+  font-size:11px;
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+}
+.home{
+  height: 26px;
+}
